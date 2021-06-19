@@ -1,5 +1,4 @@
 <?php  ?>
-
 <?php  ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -20,7 +19,6 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add">
                             Add gejala
@@ -28,7 +26,6 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-
                         <?= $this->session->flashdata('message') ?>
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
@@ -43,7 +40,6 @@
                                 <?php
                                 $no = 1;
                                 foreach ($gejala as $data) {
-
                                 ?>
                                     <tr>
                                         <td><?php echo $no; ?></td>
@@ -63,7 +59,6 @@
                                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                     <h4 class="modal-title">Edit Gejala</h4>
                                                 </div>
-
                                                 <form action="<?php echo base_url() ?>admin/edit_gejala" method="POST">
                                                     <input type="hidden" name="kode_gejala" value="<?= $data['kode_gejala']; ?>">
                                                     <div class="modal-body">
@@ -72,8 +67,6 @@
                                                             <label for="email">Gejala:</label>
                                                             <input type="text" name="gejala" class="form-control" id="email" value="<?= $data['gejala']; ?>">
                                                         </div>
-
-
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -84,7 +77,6 @@
                                         </div>
                                     </div>
 
-
                                     <!-- Modal -->
                                     <div class="modal fade" id="delete-<?= $data['kode_gejala']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
@@ -93,7 +85,6 @@
                                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                     <h4 class="modal-title">Delete Gejala</h4>
                                                 </div>
-
                                                 <form action="<?php echo base_url() ?>admin/delete_gejala" method="POST">
                                                     <div class="modal-body">
                                                         <h5>Are You Sure You Want To Delete This Data?</h5>
@@ -107,8 +98,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                 <?php $no++;
                                 } ?>
                             </tbody>
@@ -134,7 +123,6 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Add Gejala</h4>
             </div>
-
             <form action="<?php echo base_url() ?>admin/add_gejala" method="POST">
                 <div class="modal-body">
 
@@ -142,7 +130,6 @@
                         <label for="email">Gejala:</label>
                         <input type="text" name="gejala" class="form-control" id="email">
                     </div>
-
 
                 </div>
                 <div class="modal-footer">

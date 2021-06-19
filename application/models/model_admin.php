@@ -91,18 +91,67 @@ class model_admin extends CI_Model
 
 	function get_all_hamapenyakit()
 	{
+		$this->db->select('*');
+		$this->db->from('hamapenyakit');
+
+		return $this->db->get();
 	}
 
 	function add_hamapenyakit()
 	{
+		$this->db->order_by('kode_hp', 'Desc');
+		$db = $this->db->get('hamapenyakit')->row();
+
+		$noUrut = (int) substr($db->kode_hp, 2);
+		$noUrut++;
+
+		$char = "HP";
+		$newID = $char . sprintf("%02s", $noUrut);
+
+		$data = array(
+			'kode_hp' => $newID,
+			'hamapenyakit' =>  $this->input->post('hamapenyakit'),
+			'solusi' =>  $this->input->post('solusi')
+		);
+
+		$this->db->insert('hamapenyakit', $data);
+
+		if ($this->db->affected_rows() > 0) {
+			$return =  array('result' => 'success');
+		} else {
+			$return =  array('result' => 'failed');
+		}
+		return $return;
 	}
 
 	function delete_hamapenyakit()
 	{
+		$this->db->where('kode_hp', $this->input->post('kode_hp'));
+		$this->db->delete('hamapenyakit');
+
+		if ($this->db->affected_rows() > 0) {
+			$return =  array('result' => 'success');
+		} else {
+			$return =  array('result' => 'failed');
+		}
+		return $return;
 	}
 
 	function edit_hamapenyakit()
 	{
+		$data = array(
+			'hamapenyakit' =>  $this->input->post('hamapenyakit'),
+			'solusi' =>  $this->input->post('solusi')
+		);
+		$this->db->where('kode_hp', $this->input->post('kode_hp'));
+		$this->db->update('hamapenyakit', $data);
+
+		if ($this->db->affected_rows() > 0) {
+			$return =  array('result' => 'success');
+		} else {
+			$return =  array('result' => 'failed');
+		}
+		return $return;
 	}
 
 	function get_gejala_hp($kode_hp)

@@ -1,5 +1,4 @@
 <?php
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,13 +24,12 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/dist/css/skins/_all-skins.min.css">
     <!-- jQuery 3 -->
     <script src="<?php echo base_url() ?>assets/bower_components/jquery/dist/jquery.min.js"></script>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -39,7 +37,6 @@
 
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
-
         <header class="main-header">
             <!-- Logo -->
             <a href="<?php echo base_url() ?>admin" class="logo">
@@ -57,25 +54,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
-
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="<?php echo base_url() ?>assets/img/admin_icon.png" class="user-image" alt="User Image">
                                 <span class="hidden-xs"><?php echo $nama_admin; ?></span>
                             </a>
-
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
                                     <img src="<?php echo base_url() ?>assets/img/admin_icon.png" class="img-circle" alt="User Image">
-
                                     <p>
                                         <?php echo $nama_admin; ?> - Administrator
-
                                     </p>
                                 </li>
                                 <!-- Menu Footer-->
@@ -95,8 +87,8 @@
                 </div>
             </nav>
         </header>
-
         <?php  ?>
+
         <!-- Modal -->
         <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -105,7 +97,6 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h4 class="modal-title">Logout</h4>
                     </div>
-
                     <div class="modal-body">
                         <h5>Are You Sure You Want To Logout?</h5>
                     </div>
