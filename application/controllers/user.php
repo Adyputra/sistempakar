@@ -29,6 +29,11 @@ class user extends CI_Controller
 
 	public function konsultasi()
 	{
+		$data['gejala'] = $this->model_admin->get_all_gejala()->result_array();
+
+		$this->load->view('user/header');
+		$this->load->view('user/konsultasi', $data);
+		$this->load->view('user/footer');
 	}
 
 	public function diagnosa()
