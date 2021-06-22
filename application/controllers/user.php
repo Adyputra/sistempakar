@@ -21,6 +21,10 @@ class user extends CI_Controller
 
 	public function data_penyakit()
 	{
+		$data['hamapenyakit'] = $this->model_user->get_all_hamapenyakit()->result_array();
+
+		$this->load->view('user/header');
+		$this->load->view('user/data_penyakit', $data);
 	}
 
 	public function detail_penyakit()
