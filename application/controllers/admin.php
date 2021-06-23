@@ -167,6 +167,23 @@ class admin extends CI_Controller
 
 	public function detail_hp()
 	{
+		$id_admin = $this->session->userdata('id_admin');
+		$db = $this->model_admin->get_admin($id_admin)->row();
+		$data['nama_admin'] = $db->nama_admin;
+
+		$kode_hp = $this->uri->segment('3');
+		$data['kode_hp'] = $kode_hp;
+
+		$hp = $this->model_admin->get_hp($kode_hp)->row();
+		$data['hamapenyakit'] = $hp->hamapenyakit;
+
+		$data['gejala'] = $this->model_admin->get_gejala_hp($kode_hp)->result_array();
+		$data['all_gejala'] = $this->model_admin->get_all_gejala()->result_array();
+
+		$this->load->view('admin/navbar', $data);
+		$this->load->view('admin/sidebar', $data);
+		$this->load->view('admin/detail_hp', $data);
+		$this->load->view('admin/footer');
 	}
 
 	public function add_basispengetahuan()

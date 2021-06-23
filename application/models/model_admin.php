@@ -28,6 +28,11 @@ class model_admin extends CI_Model
 
 	function get_hp($kode_hp)
 	{
+		$this->db->select('*');
+		$this->db->from('hamapenyakit');
+		$this->db->where('kode_hp', $kode_hp);
+
+		return $this->db->get();
 	}
 
 	function add_gejala()
@@ -152,6 +157,12 @@ class model_admin extends CI_Model
 
 	function get_gejala_hp($kode_hp)
 	{
+		$this->db->select('*');
+		$this->db->from('basispengetahuan');
+		$this->db->join('gejala', 'basispengetahuan.kode_gejala = gejala.kode_gejala', 'left');
+		$this->db->where('kode_hp', $kode_hp);
+
+		return $this->db->get();
 	}
 
 	function add_basispengetahuan()
