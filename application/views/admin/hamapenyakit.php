@@ -25,6 +25,7 @@
                             Add Hama dan Penyakit
                         </button>
                     </div>
+
                     <!-- /.box-header -->
                     <div class="box-body">
                         <?= $this->session->flashdata('message') ?>

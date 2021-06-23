@@ -42,6 +42,18 @@ class user extends CI_Controller
 
 	public function diagnosa()
 	{
+		$gejala = $this->input->post('kode_gejala');
+		$jumlah_dipilih = count($gejala);
+		for ($x = 0; $x < $jumlah_dipilih; $x++) {
+
+			$query =	$this->db->query("select DISTINCT p.kode_hp, p.hamapenyakit from basispengetahuan b, hamapenyakit p where b.kode_gejala='$gejala[$x]' and p.kode_hp=b.kode_hp group by kode_hp limit 1");
+
+			$data['hamapenyakit'] = $query->result();
+		}
+
+		$this->load->view('user/header');
+		$this->load->view('user/diagnosa', $data);
+		$this->load->view('user/footer');
 	}
 
 	public function detail_hp()

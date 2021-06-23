@@ -12,7 +12,7 @@
 <!-- SlimScroll -->
 <script src="<?php echo base_url() ?>assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- ChartJS -->
-<script src="<?php echo base_url() ?>assets/bower_components/chart.js/Chart.js""></script>
+<script src="<?php echo base_url() ?>assets/bower_components/chart.js/Chart.js"></script>
 <!-- FastClick -->
 <script src=" <?php echo base_url() ?>assets/bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->

@@ -20,7 +20,6 @@ class model_admin extends CI_Model
 
 	function get_all_gejala()
 	{
-
 		$this->db->select('*');
 		$this->db->from('gejala');
 
@@ -33,7 +32,6 @@ class model_admin extends CI_Model
 
 	function add_gejala()
 	{
-
 		$this->db->order_by('kode_gejala', 'Desc');
 		$db = $this->db->get('gejala')->row();
 
@@ -60,7 +58,6 @@ class model_admin extends CI_Model
 
 	function delete_gejala()
 	{
-
 		$this->db->where('kode_gejala', $this->input->post('kode_gejala'));
 		$this->db->delete('gejala');
 
@@ -74,7 +71,6 @@ class model_admin extends CI_Model
 
 	function edit_gejala()
 	{
-
 		$data = array(
 			'gejala' =>  $this->input->post('gejala')
 		);

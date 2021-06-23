@@ -46,7 +46,6 @@
             <li class="nav-item <?php if ("/sp_tomato/admin/login" == $_SERVER['REQUEST_URI']) {
                                 ?> active <?php } ?>">
               <a class="nav-link " href="<?php echo base_url() ?>auth">Login</a>
-
             </li>
           </ul>
         </div>

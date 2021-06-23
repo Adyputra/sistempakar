@@ -19,11 +19,13 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
+
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add">
                             Add gejala
                         </button>
                     </div>
+
                     <!-- /.box-header -->
                     <div class="box-body">
                         <?= $this->session->flashdata('message') ?>
