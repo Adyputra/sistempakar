@@ -188,9 +188,43 @@ class admin extends CI_Controller
 
 	public function add_basispengetahuan()
 	{
+		$kode_hp = $this->input->post('kode_hp');
+		$add = $this->model_admin->add_basispengetahuan();
+
+		if ($add['result'] == 'success') {
+
+			$this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				Add Gejala Success!
+			</div>
+			');
+			redirect('admin/detail_hp/' . $kode_hp);
+		} else {
+			$this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				Add Gejala Failed!
+			</div>
+			');
+			redirect('admin/detail_hp' . $kode_hp);
+		}
 	}
 
 	public function delete_basispengetahuan()
 	{
+		$kode_hp = $this->input->post('kode_hp');
+		$delete = $this->model_admin->delete_basispengetahuan();
+
+		if ($delete['result'] == 'success') {
+
+			$this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				Delete Basis Pengetahuan Success!
+			</div>
+			');
+			redirect('admin/detail_hp/' . $kode_hp);
+		} else {
+			$this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				Delete Basis Pengetahuan Failed!
+			</div>
+			');
+			redirect('admin/detail_hp/' . $kode_hp);
+		}
 	}
 }

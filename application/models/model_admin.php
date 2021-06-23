@@ -167,13 +167,48 @@ class model_admin extends CI_Model
 
 	function add_basispengetahuan()
 	{
+		$data = array(
+			'id' => '',
+			'kode_hp' =>  $this->input->post('kode_hp'),
+			'kode_gejala' =>  $this->input->post('kode_gejala')
+		);
+
+		$this->db->insert('basispengetahuan', $data);
+
+		if ($this->db->affected_rows() > 0) {
+			$return =  array('result' => 'success');
+		} else {
+			$return =  array('result' => 'failed');
+		}
+		return $return;
 	}
 
 	function delete_basispengetahuan()
 	{
+		$this->db->where('id', $this->input->post('id'));
+		$this->db->delete('basispengetahuan');
+
+		if ($this->db->affected_rows() > 0) {
+			$return =  array('result' => 'success');
+		} else {
+			$return =  array('result' => 'failed');
+		}
+		return $return;
 	}
 
 	function edit_basispengetahuan()
 	{
+		$data = array(
+			'basispengetahuan' =>  $this->input->post('basispengetahuan')
+		);
+		$this->db->where('id', $this->input->post('id'));
+		$this->db->update('basispengetahuan', $data);
+
+		if ($this->db->affected_rows() > 0) {
+			$return =  array('result' => 'success');
+		} else {
+			$return =  array('result' => 'failed');
+		}
+		return $return;
 	}
 }
