@@ -23,4 +23,30 @@ class model_user extends CI_Model
 
 		return $this->db->get();
 	}
+	function get_gejala_hp($kode_hp)
+	{
+		$this->db->select('*');
+		$this->db->from('basispengetahuan');
+		$this->db->join('gejala', 'basispengetahuan.kode_gejala = gejala.kode_gejala', 'left');
+		$this->db->where('kode_hp', $kode_hp);
+
+		return $this->db->get();
+	}
+
+	function get_all_gejala()
+	{
+		
+		$this->db->select('*');
+		$this->db->from('gejala');
+
+		return $this->db->get();
+	}
+	function get_hp($kode_hp)
+	{
+		$this->db->select('*');
+		$this->db->from('hamapenyakit');
+		$this->db->where('kode_hp', $kode_hp);
+
+		return $this->db->get();
+	}
 }

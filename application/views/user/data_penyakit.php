@@ -1,12 +1,15 @@
 <div class="jumbotron bg-danger">
   <br><br>
-  <h1 class="display-4 text-center" style="color: #FFF;"><b>Data Hama & Penyakit Tanaman Tomat</b></h1>
+  <br><br>
+  <h1 class="display-5 text-center" style="color: #FFF;"><b>Data Hama & Penyakit Tanaman Tomat</b></h1>
+  <br><br>
+<div class="container">
   <!-- /.box-header -->
   <div class="box-body" style="color: #FFF;">
                         <?= $this->session->flashdata('message') ?>
-                        <table id="example1" class="table table-bordered table-striped"  style="color: #FFF;">
+                        <table id="table" class="table table-bordered"  >
                             <thead>
-                                <tr>
+                                <tr style="color: #FFF;">
                                     <th>No</th>
                                     <th>Kode</th>
                                     <th>Hama dan Penyakit</th>
@@ -24,7 +27,7 @@
                                         <td><?= $data['kode_hp']; ?></td>
                                         <td><?= $data['hamapenyakit']; ?></td>
                                         <td>  
-                                            <a href="<?php echo base_url() ?>admin/detail_hp/<?= $data['kode_hp']; ?>" class="btn btn-primary"><span class="fa fa-search"></span></a>
+                                            <a href="<?php echo base_url() ?>user/detail_hp/<?= $data['kode_hp']; ?>" class="btn btn-primary"><span class="fa fa-search"></span></a>
                                         </td>
                                     </tr>
                                 <?php $no++;
@@ -33,3 +36,10 @@
                         </table>            
   <br><br>
 </div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#table').DataTable({
+            "pageLength": 20
+        });
+    });
+</script>
