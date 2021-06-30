@@ -25,10 +25,11 @@ class model_user extends CI_Model
 	}
 	function get_gejala_hp($kode_hp)
 	{
-		$this->db->select('*');
+		$this->db->select('basispengetahuan.*, hamapenyakit.solusi,gejala.gejala');
 		$this->db->from('basispengetahuan');
-		$this->db->join('gejala', 'basispengetahuan.kode_gejala = gejala.kode_gejala', 'left');
-		$this->db->where('kode_hp', $kode_hp);
+		$this->db->join('gejala', 'basispengetahuan.kode_gejala = gejala.kode_gejala');
+		$this->db->join('hamapenyakit', 'basispengetahuan.kode_hp = hamapenyakit.kode_hp');
+		$this->db->where('basispengetahuan.kode_hp', $kode_hp);
 
 		return $this->db->get();
 	}
@@ -46,7 +47,9 @@ class model_user extends CI_Model
 		$this->db->select('*');
 		$this->db->from('hamapenyakit');
 		$this->db->where('kode_hp', $kode_hp);
-
+		
 		return $this->db->get();
 	}
+	
+
 }

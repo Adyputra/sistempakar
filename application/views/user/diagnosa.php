@@ -25,7 +25,7 @@
                     <td><?php echo $hamapenyakit->kode_hp;  ?></td>
                     <td><?php echo $hamapenyakit->hamapenyakit;  ?></td>
                     <td>
-                        <a href="<?php echo base_url() ?>user/detail_hp/<?= $hamapenyakit->kode_hp; ?>" class="btn btn-primary"><span class="fa fa-search"></span></a>
+                        <a href="<?php echo base_url() ?>user/detail_diagnosa/<?= $hamapenyakit->kode_hp; ?>" class="btn btn-primary"><span class="fa fa-search"></span></a>
                     </td>
                 </tr>
             <?php $no++;

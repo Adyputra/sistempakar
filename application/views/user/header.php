@@ -40,9 +40,6 @@
                                 ?> active <?php } ?>">
               <a class="nav-link " href="<?php echo base_url() ?>user/data_penyakit">Data Hama dan Penyakit</a>
             </li>
-            <li class="nav-item <?php if ("/sp_tomato/user/contact" == $_SERVER['REQUEST_URI']) {
-                                ?> active <?php } ?>">
-              <a class="nav-link " href="<?php echo base_url() ?>user/contact">Contact</a>
             <li class="nav-item <?php if ("/sp_tomato/admin/login" == $_SERVER['REQUEST_URI']) {
                                 ?> active <?php } ?>">
               <a class="nav-link " href="<?php echo base_url() ?>auth">Login</a>
