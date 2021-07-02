@@ -5,14 +5,36 @@ class admin extends CI_Controller
 {
 	public function __construct()
 	{
+		parent::__construct();
+		$this->load->model("model_admin");
 	}
 
 	public function index()
 	{
+		$id_admin = $this->session->userdata('id_admin');
+
+		$db = $this->model_admin->get_admin($id_admin)->row();
+		$data['nama_admin'] = $db->nama_admin;
+		$data['gejala'] = $this->model_admin->get_all_gejala()->num_rows();
+		$data['hamapenyakit'] = $this->model_admin->get_all_hamapenyakit()->num_rows();
+		$this->load->view('admin/navbar', $data);
+		$this->load->view('admin/sidebar', $data);
+		$this->load->view('admin/dashboard_admin', $data);
+		$this->load->view('admin/footer');
 	}
 
 	public function profile()
 	{
+		$id_admin = $this->session->userdata('id_admin');
+
+		$db = $this->model_admin->get_admin($id_admin)->row();
+		$data['nama_admin'] = $db->nama_admin;
+		$data['gejala'] = $this->model_admin->get_all_gejala()->num_rows();
+		$data['hamapenyakit'] = $this->model_admin->get_all_hamapenyakit()->num_rows();
+		$this->load->view('admin/navbar', $data);
+		$this->load->view('admin/sidebar', $data);
+		$this->load->view('admin/profile', $data);
+		$this->load->view('admin/footer');
 	}
 
 	public function edit_admin()

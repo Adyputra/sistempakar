@@ -8,6 +8,7 @@ class model_admin extends CI_Model
 
 	function get_admin($id_admin)
 	{
+		return $this->db->get_where("admin", ['id_admin' => $id_admin]);
 	}
 
 	function get_all_admin()
