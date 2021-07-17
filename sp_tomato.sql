@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Jul 2021 pada 15.10
--- Versi server: 10.1.37-MariaDB
--- Versi PHP: 7.3.1
+-- Waktu pembuatan: 17 Jul 2021 pada 16.29
+-- Versi server: 10.1.38-MariaDB
+-- Versi PHP: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -59,32 +59,7 @@ CREATE TABLE `basispengetahuan` (
 --
 
 INSERT INTO `basispengetahuan` (`id`, `kode_hp`, `kode_gejala`) VALUES
-(2, 'HP13', 'G32'),
-(3, 'HP13', 'G33'),
-(4, 'HP13', 'G34'),
-(5, 'HP12', 'G30'),
-(6, 'HP12', 'G31'),
-(7, 'HP11', 'G28'),
-(8, 'HP11', 'G29'),
-(9, 'HP10', 'G26'),
-(10, 'HP10', 'G27'),
-(11, 'HP09', 'G23'),
-(12, 'HP09', 'G24'),
-(13, 'HP09', 'G25'),
-(14, 'HP08', 'G21'),
-(15, 'HP08', 'G22'),
-(19, 'HP06', 'G01'),
-(20, 'HP06', 'G15'),
-(21, 'HP06', 'G16'),
-(22, 'HP06', 'G17'),
 (23, 'HP05', 'G01'),
-(30, 'HP03', 'G03'),
-(31, 'HP03', 'G09'),
-(32, 'HP02', 'G01'),
-(33, 'HP02', 'G02'),
-(34, 'HP02', 'G06'),
-(35, 'HP02', 'G07'),
-(36, 'HP02', 'G08'),
 (37, 'HP01', 'G01'),
 (38, 'HP01', 'G02'),
 (40, 'HP01', 'G04'),
@@ -109,7 +84,84 @@ INSERT INTO `basispengetahuan` (`id`, `kode_hp`, `kode_gejala`) VALUES
 (60, 'HP07', 'G06'),
 (61, 'HP07', 'G07'),
 (63, 'HP07', 'G17'),
-(64, 'HP07', 'G19');
+(64, 'HP07', 'G19'),
+(65, 'HP08', 'G06'),
+(66, 'HP08', 'G07'),
+(67, 'HP08', 'G08'),
+(68, 'HP08', 'G28'),
+(69, 'HP09', 'G01'),
+(70, 'HP09', 'G03'),
+(71, 'HP09', 'G08'),
+(72, 'HP09', 'G09'),
+(73, 'HP09', 'G20'),
+(74, 'HP10', 'G01'),
+(75, 'HP10', 'G02'),
+(76, 'HP10', 'G03'),
+(77, 'HP10', 'G04'),
+(78, 'HP10', 'G10'),
+(79, 'HP10', 'G14'),
+(80, 'HP10', 'G18'),
+(81, 'HP11', 'G01'),
+(82, 'HP11', 'G03'),
+(83, 'HP11', 'G05'),
+(84, 'HP11', 'G08'),
+(85, 'HP11', 'G21'),
+(86, 'HP11', 'G29'),
+(87, 'HP12', 'G01'),
+(88, 'HP12', 'G02'),
+(89, 'HP12', 'G05'),
+(90, 'HP12', 'G10'),
+(91, 'HP12', 'G15'),
+(92, 'HP12', 'G21'),
+(93, 'HP12', 'G29'),
+(94, 'HP06', 'G06'),
+(95, 'HP06', 'G07'),
+(96, 'HP06', 'G20'),
+(97, 'HP13', 'G01'),
+(98, 'HP13', 'G02'),
+(99, 'HP13', 'G09'),
+(100, 'HP02', 'G01'),
+(101, 'HP02', 'G02'),
+(102, 'HP02', 'G03'),
+(103, 'HP02', 'G09'),
+(104, 'HP02', 'G20'),
+(105, 'HP14', 'G06'),
+(106, 'HP14', 'G18'),
+(107, 'HP03', 'G01'),
+(108, 'HP03', 'G02'),
+(109, 'HP03', 'G11'),
+(110, 'HP03', 'G22'),
+(111, 'HP03', 'G31'),
+(112, 'HP15', 'G01'),
+(113, 'HP15', 'G11'),
+(114, 'HP15', 'G12'),
+(115, 'HP15', 'G13'),
+(116, 'HP15', 'G29'),
+(117, 'HP15', 'G32'),
+(118, 'HP16', 'G02'),
+(119, 'HP16', 'G12'),
+(120, 'HP16', 'G21'),
+(121, 'HP16', 'G34'),
+(122, 'HP17', 'G10'),
+(123, 'HP17', 'G12'),
+(124, 'HP17', 'G16'),
+(125, 'HP17', 'G35'),
+(126, 'HP17', 'G36'),
+(127, 'HP17', 'G37'),
+(128, 'HP18', 'G01'),
+(129, 'HP18', 'G12'),
+(130, 'HP18', 'G13'),
+(131, 'HP18', 'G38'),
+(132, 'HP18', 'G39'),
+(133, 'HP19', 'G03'),
+(134, 'HP19', 'G40'),
+(135, 'HP19', 'G41'),
+(136, 'HP21', 'G02'),
+(137, 'HP21', 'G04'),
+(138, 'HP21', 'G42'),
+(139, 'HP20', 'G03'),
+(140, 'HP20', 'G10'),
+(141, 'HP20', 'G43');
 
 -- --------------------------------------------------------
 
@@ -189,26 +241,26 @@ CREATE TABLE `hamapenyakit` (
 
 INSERT INTO `hamapenyakit` (`kode_hp`, `hamapenyakit`, `solusi`) VALUES
 ('HP01', 'Layu Fusarium', 'Non kimiawi,antara lain dengan menerapkan pola pergiliran (rotasi) tanaman yang bukan sefamili, menggunakan benih ataun bibit yang sehat, mencabut tanaman yang sakit agar tidka menular, dan menggunakan MPHP untuk meningkatkan suhu tanah.\r\nKimiawi, dengan cara mencelupkan akar bibit tomat ataupun cherry ke dalam larutan fungisida Benomyl 1.000 ppm sebelum tanam.'),
-('HP02', 'Layu Bakteri', 'menggunakan teknologi sambung pucuk, dengan cara memotong bagian batang tanaman thomat lalu celupkan ke air beberapa menit sehingga lendir putih keruh akan mengalir keluar'),
-('HP03', 'Mozaik', 'apabila tanaman thomat sudah terinfeksi virus tersebut maka tidak dapat sembuh dari virus tersebut, namun dapat dicegah dengan cara gunakan bibit tanaman yang sehat, jangan tanam dengan jenis yang sama dalam jangka waktu minimal 7 bulan, tanam pada suhu 70 derajat selama 2-4 hari untuk mengerakdiksi virus yang terbawa dalam endosperm.'),
+('HP02', 'Layu Bakteri', 'Mengaplikasikan beberapa Fungisida Hayati seperti Anfush atau Decoprima sebagai langkah awal sterilisasi lahan sebelum penanaman.\r\nJika sudah ada beberapa tanaman terserang, anda juga bisa aplikasikan antibiotik/anti bakteri tanaman seperti Agrept 20 WP.'),
+('HP03', 'Mozaik', 'Pemberian imunisasi pada tomat dengan memberikan strain virus yang telah dilemahkan diharapkan mampu berfungsi sebagai sparing partner yang nantinya akan memiliki kemampuan untuk menolak virus yang sama dengan serangan lebih ganas. Adapun pengaruh pemberian strain virus pada tanaman tomat tidak akan terlalu merugikan disebabkan gejala yang diakibatkannya juga tidak terlalu parah sehingga produksinya tidak banyak berkurang.'),
 ('HP04', 'Bercak Daun Septoria', 'dapat ditangani dengan cara memotong bagian batang yang terinfeksi.'),
 ('HP05', 'Bercak Cokelat', 'apabila tanaman thomat sudah terinfeksi virus tersebut maka tidak dapat sembuh dari virus tersebut, namun dapat dicegah dengan cara gunakan bibit tanaman yang sehat, jangan tanam dengan jenis yang sama dalam jangka waktu minimal 7 bulan, tanam pada suhu 70 derajat selama 2-4 hari untuk mengerakdiksi virus yang terbawa dalam endosperm.'),
-('HP06', 'Antraknos', 'apabila tanaman tomat telah terinveksi virus tersebut maka dapat dicegah dengan cara memperlebar jarak tanam, rajin melakukan penyiraman dan melakukan penyemprotan fungisida sistemik seminggu sekali.'),
+('HP06', 'Antraknos', 'Melakukan sistem tumpangsari tanaman selama 1-2 tahun.\r\nMelapisi tanah dengan plastik mulsa, dan berikan tiang lanjaran agar tomat tidak menyentuh tanah.'),
 ('HP07', 'Busuk Daun', 'Non kimiawi, antara lain dengan mengatur waktu tanam dimusim kemarau dan pergiliran (rotasi) tanaman dengan jenis yang bukan inang penyakit busuk daun.\r\nKimiawi, disemprot fungisida yang efektif seperti Difolatan 4 F atau Dithane M-45 0,2'),
-('HP08', 'Busuk Buah Rhizoctonia', 'pengendaliannya dapat dilakukan dengan cara membersihkan gulma, sehingga tidak ada tempat persembunyian bagi ulat ini. Secara kimiawi dapat disemprot dengan insektisida coracron, regent atau prevaton'),
-('HP09', 'Busuk Buah antraknosa', 'pengendaliannya dapat dilakukan dengan cara membersihkan gulma, membuang dan membunuh ulat secara manual. Secara kimiawi dapat disemprot dengan insektisida abamectin, regent atau prevaton.'),
-('HP10', 'Penyakit Layu', 'pemangkasan daun yang terserang atau dimakan oleh ulat jengkal atau penyemprotan insektisida, regent atau prevaton.'),
-('HP11', 'Bercak Bakteri', 'dengan menggunakan mulsa plastik perak, dan penyemprotan akarisida berbahan aktif abamectin.'),
-('HP12', 'Penyakit Bercak Daun', 'berdasarkan kultur teknis adalah pembersihan lahan dari gulma, berdasarkan mekanis dengan menggunakan perangkap kuning yang telah dioleskan dengan vaselin, oli atau minyak goreng pada perangkap tersebut, berdasarkan biologis dengan membudidayakan musuh alami hama penggorok daun yaitu liriomyza sp. berdasarkan kimia dengan menyemprotkan pestisida dari golongan hidroklorin.'),
-('HP13', 'Layu Cendawan', 'menggunakan perangkap lalat buah untuk mengurangi populasi lalat buah. Kebersihan dan sanitasi area budidaya harus diperhatikan dan penyemprotan insektisida curacron.'),
-('HP14', 'Bercak (Bacterial speck)', 'M'),
-('HP15', 'Penyakit Kerdil', 'M'),
-('HP16', 'Bercak Kering dan Mati Urat', 'M'),
-('HP17', 'Kuning dan Daun Menggulung', 'M'),
-('HP18', 'Bengkak Akar', 'M'),
-('HP19', 'Blossom End Rot', 'M'),
-('HP20', 'Tomato Yellow Leaf Curl Virus', 'M'),
-('HP21', 'Busuk Batang Didymella sp', 'M');
+('HP08', 'Busuk Buah Rhizoctonia', 'Pilih benih yang tahan penyakit dan hama.\r\nMelakukan Rotasi tanaman.\r\nMencabut dan membakar gulma dan tanaman yang terserang penyakit.\r\nSemprotkan fungisida berbahan aktif chlorothalonil, interval 7-8 hari sekali.'),
+('HP09', 'Busuk Buah Antraknosa', 'Melakukan sistem tumpangsari tanaman selama 1-2 tahun.\r\nMelapisi tanah dengan plastik mulsa, dan berikan tiang lanjaran agar tomat tidak menyentuh tanah.\r\nMenyemprotkan fungisida berbahan aktif kaptafol.'),
+('HP10', 'Penyakit Layu', 'Semprotkan antibiotic pada bibit tanaman tomat'),
+('HP11', 'Bercak Bakteri', 'Tanaman yang sakit sebaiknya dicabut dan dibakar di area yang jauh dari lahan penanaman.\r\nMenyirami tanaman dengan menggunakan air yang bersih dan terbebas dari penyakit.'),
+('HP12', 'Penyakit Bercak Daun', 'Semprotkan antibiotic pada bibit tanaman tomat.'),
+('HP13', 'Layu Cendawan', 'Non kimiawi,antara lain dengan menerapkan pola pergiliran (rotasi) tanaman yang bukan sefamili, menggunakan benih ataun bibit yang sehat, mencabut tanaman yang sakit agar tidka menular, dan menggunakan MPHP untuk meningkatkan suhu tanah.\r\n'),
+('HP14', 'Bercak (Bacterial speck)', 'Tanaman yang sakit sebaiknya dicabut dan dibakar di area yang jauh dari lahan penanaman.'),
+('HP15', 'Penyakit Kerdil', 'Pemberian imunisasi pada tomat dengan memberikan strain virus yang telah dilemahkan diharapkan mampu berfungsi sebagai sparing partner yang nantinya akan memiliki kemampuan untuk menolak virus yang sama dengan serangan lebih ganas. Adapun pengaruh pemberian strain virus pada tanaman tomat tidak akan terlalu merugikan disebabkan gejala yang diakibatkannya juga tidak terlalu parah sehingga produksinya tidak banyak berkurang.'),
+('HP16', 'Bercak Kering dan Mati Urat', 'Pemberian imunisasi pada tomat dengan memberikan strain virus yang telah dilemahkan diharapkan mampu berfungsi sebagai sparing partner yang nantinya akan memiliki kemampuan untuk menolak virus yang sama dengan serangan lebih ganas. Adapun pengaruh pemberian strain virus pada tanaman tomat tidak akan terlalu merugikan disebabkan gejala yang diakibatkannya juga tidak terlalu parah sehingga produksinya tidak banyak berkurang.\r\n'),
+('HP17', 'Kuning dan Daun Menggulung', 'Pemberian imunisasi pada tomat dengan memberikan strain virus yang telah dilemahkan diharapkan mampu berfungsi sebagai sparing partner yang nantinya akan memiliki kemampuan untuk menolak virus yang sama dengan serangan lebih ganas. Adapun pengaruh pemberian strain virus pada tanaman tomat tidak akan terlalu merugikan disebabkan gejala yang diakibatkannya juga tidak terlalu parah sehingga produksinya tidak banyak berkurang.'),
+('HP18', 'Bengkak Akar', 'Menggunakan Nematisida, seperti DD, vapam, dan dazomet. Pestisida ini ditaburkan pada tanah tiga minggu sebelum musim tanam.\r\n'),
+('HP19', 'Blossom End Rot', 'Lakukan pengapuran tanah pada saat pengolahan tanah, terutama lahan yang mudah kekurangan Ca atau pH-nya rendah. Dosis pengapuran disesuaikan dengan angka pH tanah, namun umumnya sekitar 1.000 kg per ha, dicampurkan merata dengan tanah. Kalsit, dolomit, dan zeolit adalah contoh jenis kapur yang dapat digunakan.'),
+('HP20', 'Tomato Yellow Leaf Curl Virus', 'Pengendalian dapat dilakukan dengan cara mencabut dan membakar daun tomat yang terkena virus.'),
+('HP21', 'Busuk Batang Didymella sp', 'Segera cabut dan musnahkan jika terdapat bibit cabe yang terinfeksi virus phytophthora.');
 
 --
 -- Indexes for dumped tables
@@ -252,7 +304,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT untuk tabel `basispengetahuan`
 --
 ALTER TABLE `basispengetahuan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
