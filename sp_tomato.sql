@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Jul 2021 pada 16.29
--- Versi server: 10.1.38-MariaDB
--- Versi PHP: 7.3.2
+-- Waktu pembuatan: 18 Jul 2021 pada 11.39
+-- Versi server: 10.1.37-MariaDB
+-- Versi PHP: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -243,8 +243,8 @@ INSERT INTO `hamapenyakit` (`kode_hp`, `hamapenyakit`, `solusi`) VALUES
 ('HP01', 'Layu Fusarium', 'Non kimiawi,antara lain dengan menerapkan pola pergiliran (rotasi) tanaman yang bukan sefamili, menggunakan benih ataun bibit yang sehat, mencabut tanaman yang sakit agar tidka menular, dan menggunakan MPHP untuk meningkatkan suhu tanah.\r\nKimiawi, dengan cara mencelupkan akar bibit tomat ataupun cherry ke dalam larutan fungisida Benomyl 1.000 ppm sebelum tanam.'),
 ('HP02', 'Layu Bakteri', 'Mengaplikasikan beberapa Fungisida Hayati seperti Anfush atau Decoprima sebagai langkah awal sterilisasi lahan sebelum penanaman.\r\nJika sudah ada beberapa tanaman terserang, anda juga bisa aplikasikan antibiotik/anti bakteri tanaman seperti Agrept 20 WP.'),
 ('HP03', 'Mozaik', 'Pemberian imunisasi pada tomat dengan memberikan strain virus yang telah dilemahkan diharapkan mampu berfungsi sebagai sparing partner yang nantinya akan memiliki kemampuan untuk menolak virus yang sama dengan serangan lebih ganas. Adapun pengaruh pemberian strain virus pada tanaman tomat tidak akan terlalu merugikan disebabkan gejala yang diakibatkannya juga tidak terlalu parah sehingga produksinya tidak banyak berkurang.'),
-('HP04', 'Bercak Daun Septoria', 'dapat ditangani dengan cara memotong bagian batang yang terinfeksi.'),
-('HP05', 'Bercak Cokelat', 'apabila tanaman thomat sudah terinfeksi virus tersebut maka tidak dapat sembuh dari virus tersebut, namun dapat dicegah dengan cara gunakan bibit tanaman yang sehat, jangan tanam dengan jenis yang sama dalam jangka waktu minimal 7 bulan, tanam pada suhu 70 derajat selama 2-4 hari untuk mengerakdiksi virus yang terbawa dalam endosperm.'),
+('HP04', 'Bercak Daun Septoria', '1. Gulma beserta tanaman tomat yang mati dibersihkan dan dibakar \r\n2. Lakukan rotasi tanaman yang berbeda familinya agar penyakit tidak\r\nmenyebar \r\n3. Semprot tanaman menggunakan fungisida'),
+('HP05', 'Bercak Cokelat', 'Non kimiawi,melakukan pergiliran (rotasi) tanaman, perlakuan benih direndam dalam air hangat 55°-60°C selama 15-30 menit, dan menjaga kebersihan (sanitasi) kebun.\r\nKimiawi, disemprot dengan fungisida yang efektif, seperti Brestan 60 72 WP, Dithane M-45, Daconil 75 WP, Difolatan 4 F, atau Zincofol 60 WP 2 gram bahan aktif/liter air.'),
 ('HP06', 'Antraknos', 'Melakukan sistem tumpangsari tanaman selama 1-2 tahun.\r\nMelapisi tanah dengan plastik mulsa, dan berikan tiang lanjaran agar tomat tidak menyentuh tanah.'),
 ('HP07', 'Busuk Daun', 'Non kimiawi, antara lain dengan mengatur waktu tanam dimusim kemarau dan pergiliran (rotasi) tanaman dengan jenis yang bukan inang penyakit busuk daun.\r\nKimiawi, disemprot fungisida yang efektif seperti Difolatan 4 F atau Dithane M-45 0,2'),
 ('HP08', 'Busuk Buah Rhizoctonia', 'Pilih benih yang tahan penyakit dan hama.\r\nMelakukan Rotasi tanaman.\r\nMencabut dan membakar gulma dan tanaman yang terserang penyakit.\r\nSemprotkan fungisida berbahan aktif chlorothalonil, interval 7-8 hari sekali.'),
