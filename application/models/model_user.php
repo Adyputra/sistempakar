@@ -16,6 +16,7 @@ class model_user extends CI_Model
 			return $this->db->get();
 		}
 	}
+
 	function get_all_hamapenyakit()
 	{
 		$this->db->select('*');
@@ -23,6 +24,7 @@ class model_user extends CI_Model
 
 		return $this->db->get();
 	}
+
 	function get_gejala_hp($kode_hp)
 	{
 		$this->db->select('basispengetahuan.*, hamapenyakit.solusi,gejala.gejala');
@@ -36,20 +38,19 @@ class model_user extends CI_Model
 
 	function get_all_gejala()
 	{
-		
+
 		$this->db->select('*');
 		$this->db->from('gejala');
 
 		return $this->db->get();
 	}
+
 	function get_hp($kode_hp)
 	{
 		$this->db->select('*');
 		$this->db->from('hamapenyakit');
 		$this->db->where('kode_hp', $kode_hp);
-		
+
 		return $this->db->get();
 	}
-	
-
 }

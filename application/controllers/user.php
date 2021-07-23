@@ -26,6 +26,7 @@ class user extends CI_Controller
 		$this->load->view('user/header');
 		$this->load->view('user/data_penyakit', $data);
 	}
+
 	public function detail_hp()
 	{
 		$kode_hp = $this->uri->segment('3');
@@ -64,6 +65,7 @@ class user extends CI_Controller
 		$this->load->view('user/diagnosa', $data);
 		$this->load->view('user/footer');
 	}
+
 	public function detail_diagnosa()
 	{
 		$kode_hp = $this->uri->segment('3');
@@ -71,12 +73,11 @@ class user extends CI_Controller
 
 		$hp = $this->model_user->get_hp($kode_hp)->row();
 		$data['hamapenyakit'] = $hp->hamapenyakit;
-		
+
 		$data['gejala'] = $this->model_user->get_gejala_hp($kode_hp)->result_array();
 		$data['gejala_all'] = $this->model_user->get_all_gejala()->result_array();
-		
+
 		$this->load->view('user/header');
 		$this->load->view('user/detail_diagnosa', $data);
 	}
-	
 }

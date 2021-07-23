@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'sp_tomato',
+	'hostname' => 'ftp.wsjti.id',
+	'username' => 'mahasiswa@wsjti.id',
+	'password' => 'wsjtiPolije',
+	'database' => 'u1449240_sc_3',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
